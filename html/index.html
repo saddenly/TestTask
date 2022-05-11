@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+    <span class="greeting"><span class="grey">Здравствуйте,</span> Человек №3596941</span>
+    <a class="change-status" onclick="changeStatus()" href="#"><span
+            style="font-size: inherit">Сменить статус</span></a>
+    <div class="triangle"></div>
+    <div class="status" id="status">Прежде чем действовать, надо понять</div>
+    <form class="grid">
+        <label>Ваш город</label><label>
+        <select class="input" id="cities" name="city">
+        </select>
+    </label>
+        <br>
+        <label>Ваш университет</label><label>
+        <select class="input" id="universities" name="university">
+        </select>
+    </label>
+        <hr>
+        <label>Пароль</label><label>
+        <input type="password" class="input" id="password" name="password" onblur="verifyPassword()">
+        <div class="invalid" id="invalid-password"></div>
+    </label>
+        <div class="hint">Ваш новый пароль должен содержать не менее 5 символов.</div>
+        <label>Пароль еще раз</label><label>
+        <input type="password" class="input" id="re-password" name="re-password" onblur="verifyRePassword()">
+        <div class="invalid" id="invalid-repassword"></div>
+    </label>
+        <div class="hint">Повторите пароль, пожалуйста, это обезопасит вас с нами
+            на случай ошибки.
+        </div>
+        <hr>
+        <label>Электронная почта</label><label>
+        <input type="email" class="input" id="email" name="email" onblur="verifyEmail()">
+        <div class="invalid" id="invalid-email"></div>
+    </label>
+        <div class="hint">Можно изменить адрес, указанный при регистрации.</div>
+        <label>Я согласен</label><label class="accept">
+        <input type="checkbox" name="agree"> <span class="accept-hint">принимать актуальную информацию на емейл</span>
+    </label>
+        <label class="submit">
+            <button type="submit" class="submit-btn">Изменить</button>
+            <span class="last-submit" id="last-submit"></span>
+        </label>
+    </form>
+</div>
+
+
+<script src="../js/script.js">
+</script>
+</body>
+</html>
